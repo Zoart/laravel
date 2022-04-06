@@ -22,9 +22,11 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+            <div class="container pt-1">
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                    <div><img class="pe-3" src="/svg/Logo.svg" alt="logo"
+                    style="height: 20px; border-right: 2px solid #333;"></div>
+                    <div class="ps-3">freeCodeGram</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
