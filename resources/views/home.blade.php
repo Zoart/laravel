@@ -9,9 +9,9 @@
         <div class="col-9 pt-5">
             <div><h1>freecodecamp</h1></div>
             <div class="d-flex">
-                <div class="pe-4">posts</div>
-                <div class="pe-4">followers</div>
-                <div class="pe-4">following</div>
+                <div class="pe-5">posts</div>
+                <div class="pe-5">followers</div>
+                <div class="pe-5">following</div>
             </div>
         </div>
     </div>
