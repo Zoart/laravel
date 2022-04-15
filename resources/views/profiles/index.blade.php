@@ -10,15 +10,15 @@
             <div class="d-flex justify-content-between
             align-items-baseline">
                 <h1>{{ $user->username }}</h1>
-                <a style="text-decoration: none;" href="#">Add New Post</a>
+                <a style="text-decoration: none;" href="/p/create">Add New Post</a>
             </div>
             <div class="d-flex">
-                <div class="pe-5">posts</div>
+                <div class="pe-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="pe-5">followers</div>
                 <div class="pe-5">following</div>
             </div>
-            <div class="pt-4 fw-bold">{{ $user->profile->title  }}</div>
-            <div>{{ $user->profile->description }}.</div>
+            <div class="pt-4 fw-bold">title</div>
+            <div>description</div>
             <div><a class="link-dark" style="text-decoration: none;" href="#">
             {{ $user->profile->url ?? 'N/A' }}
             </a></div>
@@ -26,18 +26,22 @@
     </div>
 
     <div class="row pt-5">
-        <div class="col-4">
-            <img src="https://cdn.pixabay.com/photo/2022/03/25/19/24/waterfall-7091641_960_720.jpg"
-            class="w-100" style="height: 250px">
-        </div>
-        <div class="col-4">
+        @foreach($user->posts as $post)
+            <div class="col-4 pb-4">
+                <img src="/storage/{{ $post->image }}"
+                class="w-100" style="height: 250px">
+            </div>
+        @endforeach
+
+
+        <!-- <div class="col-4">
             <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
             class="w-100" style="height: 250px">
         </div>
         <div class="col-4">
             <img src="https://cdn.pixabay.com/photo/2021/12/21/14/47/castle-6885449_960_720.jpg"
             class="w-100" style="height: 250px">
-        </div>
+        </div> -->
     </div>
 
 </div>
